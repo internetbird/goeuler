@@ -1,4 +1,5 @@
 # testgo
 Give Go A Chance
 
-A few experiments with the GO language
+Implementations to Project Euler problems using the Go programming language
+
