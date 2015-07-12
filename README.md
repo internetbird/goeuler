@@ -1,5 +1,5 @@
 # testgo
 Give Go A Chance
 
-Implementations to Project Euler problems using the Go programming language
+Implementations to <a href="https://projecteuler.net">Project Euler</a> problems using the Go programming language
 
