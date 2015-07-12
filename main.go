@@ -6,6 +6,11 @@ import (
 
 func main() {
 
+	euler1()
+	euler2()
+}
+
+func euler1() {
 	//Project Euler Problem #1
 	sum := 0
 
@@ -16,4 +21,24 @@ func main() {
 	}
 
 	fmt.Println("The answer to Project Euler Problem #1 is :", sum)
+}
+
+func euler2() {
+	//Project Euler Problem #2
+	prevFib := 1
+	currFib := 2
+	sum := 0
+
+	for currFib < 4000000 {
+		if currFib%2 == 0 {
+			sum += currFib
+		}
+
+		temp := currFib
+		currFib = currFib + prevFib
+		prevFib = temp
+
+	}
+
+	fmt.Println("The answer to Project Euler Problem #2 is :", sum)
 }
