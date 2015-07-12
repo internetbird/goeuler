@@ -40,5 +40,5 @@ func euler2() {
 
 	}
 
-	fmt.Println("The answer to Project Euler Problem #2 is :", sum)
+	fmt.Println("The answer to Project Euler Problem #22 is :", sum)
 }
