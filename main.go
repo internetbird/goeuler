@@ -7,8 +7,9 @@ import (
 
 func main() {
 
-	//	euler1()
-	//	euler2()
+	euler1()
+	euler2()
+	euler6()
 	euler10()
 
 }
@@ -23,7 +24,8 @@ func euler1() {
 		}
 	}
 
-	fmt.Println("The answer to Project Euler Problem #1 is :", sum)
+	printAnswer(1, sum)
+
 }
 
 func euler2() {
@@ -43,10 +45,27 @@ func euler2() {
 
 	}
 
-	fmt.Println("The answer to Project Euler Problem #2 is :", sum)
+	printAnswer(2, sum)
+}
+
+func euler6() {
+	//Project Euler Problem #6
+	sumOfSquares := 0
+	sum := 0
+
+	for i := 1; i <= 100; i++ {
+		sum += i
+		sumOfSquares += int(math.Pow(float64(i), 2))
+
+	}
+	squareOfSums := int(math.Pow(float64(sum), 2))
+
+	printAnswer(6, squareOfSums-sumOfSquares)
+
 }
 
 func euler10() {
+	//Project Euler Problem #10
 	sum := 0
 
 	for i := 2; i < 2000000; i++ {
@@ -54,7 +73,13 @@ func euler10() {
 			sum += i
 		}
 	}
-	fmt.Println("The answer to Project Euler Problem #10 is :", sum)
+
+	printAnswer(10, sum)
+
+}
+
+func printAnswer(problemNum int, answer int) {
+	fmt.Printf("The answer to Project Euler Problem #%d is :%d\n", problemNum, answer)
 }
 
 func isPrime(num int) bool {
