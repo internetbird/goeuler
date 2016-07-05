@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func euler8() {
+func Euler8() {
 	inputNum := `73167176531330624919225119674426574742355349194934
             96983520312774506326239578318016984801869478851843
             85861560789112949495459501737958331952853208805511
@@ -34,17 +34,17 @@ func euler8() {
 
 	maxMult := 0
 	for i := 0; i <= 987; i++ {
-		mult := get13Mult(i, inputNum)
+		mult := Get13Mult(i, inputNum)
 		if mult > maxMult {
 			maxMult = mult
 		}
 	}
 
-	printAnswer(8, maxMult)
+	PrintAnswer(8, maxMult)
 
 }
 
-func get13Mult(startIndex int, inputNum string) int {
+func Get13Mult(startIndex int, inputNum string) int {
 	mult := 1
 	for i := 0; i < 13; i++ {
 

@@ -1,6 +1,6 @@
 package main
 
-func euler1() {
+func Euler1() {
 	//Project Euler Problem #1
 	sum := 0
 
@@ -10,6 +10,6 @@ func euler1() {
 		}
 	}
 
-	printAnswer(1, sum)
+	PrintAnswer(1, sum)
 
 }

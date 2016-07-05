@@ -1,6 +1,6 @@
 package main
 
-func euler2() {
+func Euler2() {
 	//Project Euler Problem #2
 	prevFib := 1
 	currFib := 2
@@ -17,5 +17,5 @@ func euler2() {
 
 	}
 
-	printAnswer(2, sum)
+	PrintAnswer(2, sum)
 }

@@ -2,7 +2,7 @@ package main
 
 import "math"
 
-func euler6() {
+func Euler6() {
 	//Project Euler Problem #6
 	sumOfSquares := 0
 	sum := 0
@@ -14,6 +14,6 @@ func euler6() {
 	}
 	squareOfSums := int(math.Pow(float64(sum), 2))
 
-	printAnswer(6, squareOfSums-sumOfSquares)
+	PrintAnswer(6, squareOfSums-sumOfSquares)
 
 }
