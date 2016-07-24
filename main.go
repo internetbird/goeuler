@@ -4,6 +4,7 @@ func main() {
 
 	//run the euler problem you want
 	//e.g :
-	//Euler4()
+	//Euler3()
+	Euler11()
 
 }
