@@ -13,6 +13,11 @@ func PrintAnswer(problemNum int, answer int) {
 	fmt.Printf("The answer to Project Euler Problem #%d is :%d\n", problemNum, answer)
 }
 
+func PrintStringAnswer(problemNum int, answer string) {
+
+	fmt.Printf("The answer to Project Euler Problem #%d is :%s\n", problemNum, answer)
+}
+
 //IsPrime - Checks is num is a prime number
 func IsPrime(num int) bool {
 
