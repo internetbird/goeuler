@@ -18,6 +18,16 @@ func PrintStringAnswer(problemNum int, answer string) {
 	fmt.Printf("The answer to Project Euler Problem #%d is :%s\n", problemNum, answer)
 }
 
+func PrintMatrix15(matrix [15][15]int) {
+
+	for i := 0; i < 15; i++ {
+		for j := 0; j < 15; j++ {
+			fmt.Printf("%d ", matrix[i][j])
+		}
+		fmt.Print("\n")
+	}
+}
+
 //IsPrime - Checks is num is a prime number
 func IsPrime(num int) bool {
 
