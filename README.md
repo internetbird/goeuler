@@ -2,19 +2,7 @@
 
 Solutions to <a href="https://projecteuler.net">Project Euler</a> problems using the Go programming language.
 
-So far the code includes solutions to the following problems:
-
-<ul>
-<li>
-Problem #1 - <a href="https://projecteuler.net/problem=1">Multiples of 3 and 5</a>
-</li>
-<li>
-Problem #2 - <a href="https://projecteuler.net/problem=2">Even Fibonacci numbers</a>
-</li>
-<li>
-Problem #10 - <a href="https://projecteuler.net/problem=10">Summation of primes</a>
-</li>
-</ul>
+So far the code includes solutions to problems #1 - #18
 
 Please feel free to add your solutions to any of the other problems :)
 
