@@ -3,12 +3,18 @@ package main
 import (
 	"fmt"
 	"math"
+	"math/big"
 	"strconv"
 	"strings"
 )
 
 //PrintAnswer -  Prints a formatted answer for problemNum and answer
 func PrintAnswer(problemNum int, answer int) {
+
+	fmt.Printf("The answer to Project Euler Problem #%d is :%d\n", problemNum, answer)
+}
+
+func PrintBigIntAnswer(problemNum int, answer *big.Int) {
 
 	fmt.Printf("The answer to Project Euler Problem #%d is :%d\n", problemNum, answer)
 }
@@ -62,4 +68,15 @@ func Reverse(s string) string {
 		r[i], r[j] = r[j], r[i]
 	}
 	return string(r)
+}
+
+func SumDigits(digits string) int {
+
+	sum := 0
+	for i := 0; i < len(digits); i++ {
+		digit, _ := strconv.Atoi(string(digits[i]))
+		sum += digit
+	}
+
+	return sum
 }

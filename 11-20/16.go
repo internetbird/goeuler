@@ -11,12 +11,7 @@ func Euler16() {
 
 	powValStr := powVal.String()
 
-	sum := 0
-
-	for i := 0; i < len(powValStr); i++ {
-		digit, _ := strconv.Atoi(string(powValStr[i]))
-		sum += digit
-	}
+	sum := SumDigits(powVal.String())
 
 	PrintAnswer(16, sum)
 }
