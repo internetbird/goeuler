@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"math"
 	"math/big"
 	"strconv"
 	"strings"
@@ -32,23 +31,6 @@ func PrintMatrix15(matrix [15][15]int) {
 		}
 		fmt.Print("\n")
 	}
-}
-
-//IsPrime - Checks is num is a prime number
-func IsPrime(num int) bool {
-
-	if num == 2 || num == 3 {
-		return true
-	}
-	checkLimit := int(math.Sqrt(float64(num)))
-
-	for i := 2; i <= checkLimit; i++ {
-		if num%i == 0 {
-			return false
-		}
-	}
-
-	return true
 }
 
 //IsPalidrome - Checks if num is a palidrome
