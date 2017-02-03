@@ -62,3 +62,14 @@ func SumDigits(digits string) int {
 
 	return sum
 }
+
+//Calculates the sum of an integer array
+func SumIntArray(array []int) int {
+	sum := 0
+
+	for i := 0; i < len(array); i++ {
+		sum += array[i]
+	}
+
+	return sum
+}

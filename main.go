@@ -5,6 +5,5 @@ func main() {
 	//run the euler problem you want
 	//e.g :
 	//Euler3()
-	Euler20()
-
+	Euler21()
 }
