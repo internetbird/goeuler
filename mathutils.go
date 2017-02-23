@@ -30,3 +30,22 @@ func ProperDivisorsOfNumber(num int) []int {
 	return divisors
 
 }
+
+func GetAbundantNumbers(from int, to int) []int {
+	nums := make([]int, 0, to-from)
+
+	for i := from; i <= to; i++ {
+		if IsAbundantNumber(i) {
+			nums = append(nums, i)
+		}
+	}
+	return nums
+}
+
+func IsAbundantNumber(num int) bool {
+
+	properDivisors := ProperDivisorsOfNumber(num)
+	divisorsSum := SumIntArray(properDivisors)
+
+	return divisorsSum > num
+}

@@ -33,6 +33,12 @@ func PrintMatrix15(matrix [15][15]int) {
 	}
 }
 
+func PrintIntArray(arr []int) {
+	for i := 0; i < len(arr); i++ {
+		fmt.Printf("%d ", arr[i])
+	}
+}
+
 //IsPalidrome - Checks if num is a palidrome
 func IsPalidrome(num int) bool {
 
@@ -72,4 +78,13 @@ func SumIntArray(array []int) int {
 	}
 
 	return sum
+}
+
+func Contains(s []int, e int) bool {
+	for _, a := range s {
+		if a == e {
+			return true
+		}
+	}
+	return false
 }
