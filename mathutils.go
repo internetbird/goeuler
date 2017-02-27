@@ -49,3 +49,21 @@ func IsAbundantNumber(num int) bool {
 
 	return divisorsSum > num
 }
+
+const LIM = 41
+
+var facts [LIM]uint64
+
+func Factorial(n uint64) (res uint64) {
+	if facts[n] != 0 {
+		res = facts[n]
+		return res
+	}
+
+	if n > 0 {
+		res = n * Factorial(n-1)
+		return res
+	}
+
+	return 1
+}
