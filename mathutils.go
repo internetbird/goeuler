@@ -5,6 +5,10 @@ import "math"
 //IsPrime - Checks is num is a prime number
 func IsPrime(num int) bool {
 
+	if num <= 0 {
+		return false
+	}
+
 	if num == 2 || num == 3 {
 		return true
 	}
