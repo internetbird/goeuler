@@ -69,6 +69,20 @@ func SumDigits(digits string) int {
 	return sum
 }
 
+func GetDigits(num int) []int {
+
+	digits := make([]int, 0)
+	numStr := strconv.Itoa(num)
+
+	for i := 0; i < len(numStr); i++ {
+
+		digit, _ := strconv.Atoi(string(numStr[i]))
+		digits = append(digits, digit)
+	}
+
+	return digits
+}
+
 //Calculates the sum of an integer array
 func SumIntArray(array []int) int {
 	sum := 0

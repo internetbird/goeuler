@@ -71,3 +71,7 @@ func Factorial(n uint64) (res uint64) {
 
 	return 1
 }
+
+func Power(base, power int) int {
+	return int(math.Pow(float64(base), float64(power)))
+}
