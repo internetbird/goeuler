@@ -102,3 +102,12 @@ func Contains(s []int, e int) bool {
 	}
 	return false
 }
+
+func ContainsBig(s []big.Int, e big.Int) bool {
+	for _, a := range s {
+		if a.Cmp(&e) == 0 {
+			return true
+		}
+	}
+	return false
+}

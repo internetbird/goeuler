@@ -1,6 +1,9 @@
 package main
 
-import "math"
+import (
+	"math"
+	"math/big"
+)
 
 //IsPrime - Checks is num is a prime number
 func IsPrime(num int) bool {
@@ -74,4 +77,9 @@ func Factorial(n uint64) (res uint64) {
 
 func Power(base, power int) int {
 	return int(math.Pow(float64(base), float64(power)))
+}
+
+func PowerBig(base, power int) *big.Int {
+
+	return new(big.Int).Exp(big.NewInt(int64(base)), big.NewInt(int64(power)), nil)
 }
