@@ -28,7 +28,7 @@ func Euler22() {
 		}
 
 	} else {
-		fmt.Println("Error reading names file\n")
+		fmt.Println("Error reading names file")
 	}
 
 	PrintAnswer(22, sum)
