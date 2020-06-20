@@ -69,6 +69,20 @@ func SumDigits(digits string) int {
 	return sum
 }
 
+func SumIntDigits(num int) int {
+	digits := GetDigits(num)
+
+	sum := SumIntArray(digits)
+	return sum
+}
+
+func ProductIntDigits(num int) int {
+	digits := GetDigits(num)
+
+	product := ProductIntArray(digits)
+	return product
+}
+
 func GetDigits(num int) []int {
 
 	digits := make([]int, 0)
@@ -92,6 +106,16 @@ func SumIntArray(array []int) int {
 	}
 
 	return sum
+}
+
+func ProductIntArray(array []int) int {
+	product := 1
+
+	for i := 0; i < len(array); i++ {
+		product *= array[i]
+	}
+
+	return product
 }
 
 func Contains(s []int, e int) bool {
