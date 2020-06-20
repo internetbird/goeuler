@@ -83,6 +83,7 @@ func ProductIntDigits(num int) int {
 	return product
 }
 
+//GetDigits - Retruns an array of digits that compose the given integer
 func GetDigits(num int) []int {
 
 	digits := make([]int, 0)
@@ -116,6 +117,17 @@ func ProductIntArray(array []int) int {
 	}
 
 	return product
+}
+
+//FindIndex returns the index of the integer in the integer array if it is found, otherwise it will return -1
+func FindIndex(intArray []int, intToSearchFor int) int {
+	for i, item := range intArray {
+		if item == intToSearchFor {
+			return i
+		}
+	}
+
+	return -1
 }
 
 func Contains(s []int, e int) bool {
