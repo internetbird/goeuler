@@ -1,5 +1,7 @@
 package main
 
+import "github.com/internetbird/goeuler/utils"
+
 func Euler14() {
 
 	maxChainLengh := 0
@@ -14,7 +16,7 @@ func Euler14() {
 		}
 	}
 
-	PrintAnswer(14, maxChainNum)
+	utils.PrintAnswer(14, maxChainNum)
 }
 
 func GetCollatzSequenceLength(num int) int {

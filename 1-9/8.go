@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"strconv"
 	"strings"
+
+	"github.com/internetbird/goeuler/utils"
 )
 
 func Euler8() {
@@ -40,7 +42,7 @@ func Euler8() {
 		}
 	}
 
-	PrintAnswer(8, maxMult)
+	utils.PrintAnswer(8, maxMult)
 
 }
 

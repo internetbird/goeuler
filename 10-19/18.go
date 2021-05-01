@@ -3,6 +3,9 @@ package main
 import (
 	"strconv"
 	"strings"
+
+	"github.com/internetbird/goeuler/graphutils"
+	"github.com/internetbird/goeuler/utils"
 )
 
 func Euler18() {
@@ -45,14 +48,14 @@ func Euler18() {
 	destVertex := graph.GetVertexByID("t")
 	distmap := graph.Dijks(sourceVertex, destVertex)
 
-	PrintAnswer(18, distmap[destVertex])
+	utils.PrintAnswer(18, distmap[destVertex])
 }
 
 func GetVertexID(row int, column int) string {
 	return strconv.Itoa(row) + "." + strconv.Itoa(column)
 }
 
-func AddEdges(numsMatrix [15][15]int, graph *Graph) *Graph {
+func AddEdges(numsMatrix [15][15]int, graph *graphutils.Graph) *graphutils.Graph {
 
 	//Add start edge
 	startVertex := graph.GetVertexByID("s")
@@ -60,7 +63,7 @@ func AddEdges(numsMatrix [15][15]int, graph *Graph) *Graph {
 	topVertex := graph.GetVertexByID(topVertexID)
 
 	//Add the start edge
-	firstEdge := NewEdge(startVertex, topVertex, numsMatrix[0][0])
+	firstEdge := graphutils.NewEdge(startVertex, topVertex, numsMatrix[0][0])
 	startVertex.AddEdges(firstEdge)
 
 	//Add the middle edges
@@ -76,7 +79,7 @@ func AddEdges(numsMatrix [15][15]int, graph *Graph) *Graph {
 				sourceVertexID := GetVertexID(i-1, 1)
 				sourceVertex := graph.GetVertexByID(sourceVertexID)
 
-				edge := NewEdge(sourceVertex, currentVertex, weight)
+				edge := graphutils.NewEdge(sourceVertex, currentVertex, weight)
 				sourceVertex.AddEdges(edge)
 
 			} else if j == i {
@@ -84,7 +87,7 @@ func AddEdges(numsMatrix [15][15]int, graph *Graph) *Graph {
 				sourceVertexID := GetVertexID(i-1, j-1)
 				sourceVertex := graph.GetVertexByID(sourceVertexID)
 
-				edge := NewEdge(sourceVertex, currentVertex, weight)
+				edge := graphutils.NewEdge(sourceVertex, currentVertex, weight)
 				sourceVertex.AddEdges(edge)
 
 			} else {
@@ -95,8 +98,8 @@ func AddEdges(numsMatrix [15][15]int, graph *Graph) *Graph {
 				sourceVertexID2 := GetVertexID(i-1, j)
 				sourceVertex2 := graph.GetVertexByID(sourceVertexID2)
 
-				edge1 := NewEdge(sourceVertex1, currentVertex, weight)
-				edge2 := NewEdge(sourceVertex2, currentVertex, weight)
+				edge1 := graphutils.NewEdge(sourceVertex1, currentVertex, weight)
+				edge2 := graphutils.NewEdge(sourceVertex2, currentVertex, weight)
 
 				sourceVertex1.AddEdges(edge1)
 				sourceVertex2.AddEdges(edge2)
@@ -110,30 +113,30 @@ func AddEdges(numsMatrix [15][15]int, graph *Graph) *Graph {
 		sourceVertex := graph.GetVertexByID(sourceVertexID)
 		endVertex := graph.GetVertexByID("t")
 		weight := 0
-		edge := NewEdge(sourceVertex, endVertex, weight)
+		edge := graphutils.NewEdge(sourceVertex, endVertex, weight)
 
 		sourceVertex.AddEdges(edge)
 	}
 	return graph
 }
 
-func GenerateProblemGraph() *Graph {
-	graph := NewGraph()
+func GenerateProblemGraph() *graphutils.Graph {
+	graph := graphutils.NewGraph()
 
 	//add start vertex
-	startvertex := NewVertex("s")
+	startvertex := graphutils.NewVertex("s")
 	graph.AddVertices(startvertex)
 
 	for i := 1; i <= 15; i++ {
 		for j := 1; j <= i; j++ {
 			vertexID := GetVertexID(i, j)
-			vertex := NewVertex(vertexID)
+			vertex := graphutils.NewVertex(vertexID)
 			graph.AddVertices(vertex)
 		}
 	}
 
 	//Add end vertex
-	endvertex := NewVertex("t")
+	endvertex := graphutils.NewVertex("t")
 	graph.AddVertices(endvertex)
 
 	return graph

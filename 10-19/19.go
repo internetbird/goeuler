@@ -1,5 +1,7 @@
 package main
 
+import "github.com/internetbird/goeuler/utils"
+
 func Euler19() {
 
 	numOfFirstMonthSundays := 0
@@ -12,7 +14,7 @@ func Euler19() {
 			}
 		}
 	}
-	PrintAnswer(19, numOfFirstMonthSundays)
+	utils.PrintAnswer(19, numOfFirstMonthSundays)
 }
 
 func GetNumOfDaysSinceStart(month int, year int) int {

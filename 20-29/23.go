@@ -1,9 +1,14 @@
 package main
 
+import (
+	"github.com/internetbird/goeuler/mathutils"
+	"github.com/internetbird/goeuler/utils"
+)
+
 func Euler23() {
 	sum := 0
 
-	abundantNumbers := GetAbundantNumbers(12, 28123)
+	abundantNumbers := mathutils.GetAbundantNumbers(12, 28123)
 
 	for i := 1; i < 28124; i++ {
 		if i < 24 || !IsAbundantSum(i, abundantNumbers) {
@@ -11,7 +16,7 @@ func Euler23() {
 		}
 	}
 
-	PrintAnswer(23, sum)
+	utils.PrintAnswer(23, sum)
 }
 
 func IsAbundantSum(num int, abundantNumbers []int) bool {
@@ -27,7 +32,7 @@ func IsAbundantSum(num int, abundantNumbers []int) bool {
 
 		complementSum := num - currAbundantNum
 
-		if complementSum == currAbundantNum || Contains(abundantNumbers, complementSum) {
+		if complementSum == currAbundantNum || utils.Contains(abundantNumbers, complementSum) {
 			isAbundantSum = true
 			break
 		}

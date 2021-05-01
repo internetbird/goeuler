@@ -1,5 +1,7 @@
 package main
 
+import "github.com/internetbird/goeuler/utils"
+
 func Euler5() {
 	smallestMultiple := 2520
 
@@ -7,7 +9,7 @@ func Euler5() {
 		smallestMultiple += 20
 	}
 
-	PrintAnswer(5, smallestMultiple)
+	utils.PrintAnswer(5, smallestMultiple)
 
 }
 

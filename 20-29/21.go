@@ -1,5 +1,10 @@
 package main
 
+import (
+	"github.com/internetbird/goeuler/mathutils"
+	"github.com/internetbird/goeuler/utils"
+)
+
 func Euler21() {
 
 	sum := 0
@@ -12,12 +17,12 @@ func Euler21() {
 			sum += i
 		}
 	}
-	PrintAnswer(21, sum)
+	utils.PrintAnswer(21, sum)
 }
 
 func GetSumOfProperDivisors(num int) int {
-	properDivisors := ProperDivisorsOfNumber(num)
-	sumOfProperDivisors := SumIntArray(properDivisors)
+	properDivisors := mathutils.ProperDivisorsOfNumber(num)
+	sumOfProperDivisors := utils.SumIntArray(properDivisors)
 
 	return sumOfProperDivisors
 

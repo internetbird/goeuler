@@ -3,6 +3,8 @@ package main
 import (
 	"strconv"
 	"strings"
+
+	"github.com/internetbird/goeuler/utils"
 )
 
 func Euler11() {
@@ -56,7 +58,7 @@ func Euler11() {
 		}
 	}
 
-	PrintAnswer(11, maxProduct)
+	utils.PrintAnswer(11, maxProduct)
 
 }
 

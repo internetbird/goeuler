@@ -1,6 +1,11 @@
 package main
 
-import "math/big"
+import (
+	"math/big"
+
+	"github.com/internetbird/goeuler/mathutils"
+	"github.com/internetbird/goeuler/utils"
+)
 
 func Euler29() {
 
@@ -8,11 +13,11 @@ func Euler29() {
 
 	for a := 2; a <= 100; a++ {
 		for b := 2; b <= 100; b++ {
-			power := PowerBig(a, b)
-			if !ContainsBig(nums, *power) {
+			power := mathutils.PowerBig(a, b)
+			if !utils.ContainsBig(nums, *power) {
 				nums = append(nums, *power)
 			}
 		}
 	}
-	PrintAnswer(29, len(nums))
+	utils.PrintAnswer(29, len(nums))
 }

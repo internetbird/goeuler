@@ -1,6 +1,10 @@
 package main
 
-import "math/big"
+import (
+	"math/big"
+
+	"github.com/internetbird/goeuler/utils"
+)
 
 func Euler20() {
 
@@ -13,7 +17,7 @@ func Euler20() {
 		factorialWinthoutZeros.Mul(factorialWinthoutZeros, multiplier)
 	}
 
-	sum := SumDigits(factorialWinthoutZeros.String())
+	sum := utils.SumDigits(factorialWinthoutZeros.String())
 
-	PrintAnswer(20, sum)
+	utils.PrintAnswer(20, sum)
 }

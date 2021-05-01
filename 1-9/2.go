@@ -1,5 +1,7 @@
 package main
 
+import "github.com/internetbird/goeuler/utils"
+
 func Euler2() {
 	//Project Euler Problem #2
 	prevFib := 1
@@ -17,5 +19,5 @@ func Euler2() {
 
 	}
 
-	PrintAnswer(2, sum)
+	utils.PrintAnswer(2, sum)
 }

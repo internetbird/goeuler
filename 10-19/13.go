@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"strconv"
 	"strings"
+
+	"github.com/internetbird/goeuler/utils"
 )
 
 func Euler13() {
@@ -127,5 +129,5 @@ func Euler13() {
 		carry = sum / 10
 
 	}
-	PrintAnswer(13, carry)
+	utils.PrintAnswer(13, carry)
 }

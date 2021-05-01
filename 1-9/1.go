@@ -1,5 +1,7 @@
 package main
 
+import "github.com/internetbird/goeuler/utils"
+
 func Euler1() {
 	//Project Euler Problem #1
 	sum := 0
@@ -10,6 +12,6 @@ func Euler1() {
 		}
 	}
 
-	PrintAnswer(1, sum)
+	utils.PrintAnswer(1, sum)
 
 }

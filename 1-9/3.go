@@ -2,6 +2,9 @@ package main
 
 import (
 	"math"
+
+	"github.com/internetbird/goeuler/mathutils"
+	"github.com/internetbird/goeuler/utils"
 )
 
 func Euler3() {
@@ -12,11 +15,11 @@ func Euler3() {
 	topLimit := int(math.Sqrt(float64(questionNum)))
 
 	for i := largestPrimeFactor; i < topLimit; i++ {
-		if IsPrime(i) && questionNum%i == 0 {
+		if mathutils.IsPrime(i) && questionNum%i == 0 {
 			largestPrimeFactor = i
 		}
 	}
 
-	PrintAnswer(3, largestPrimeFactor)
+	utils.PrintAnswer(3, largestPrimeFactor)
 
 }

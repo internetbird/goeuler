@@ -1,5 +1,9 @@
 package main
 
+import (
+	"github.com/internetbird/goeuler/utils"
+)
+
 func Euler4() {
 
 	largest_palidrome := 0
@@ -9,11 +13,11 @@ func Euler4() {
 
 			mult := i * j
 
-			if IsPalidrome(mult) && mult > largest_palidrome {
+			if utils.IsPalidrome(mult) && mult > largest_palidrome {
 				largest_palidrome = mult
 			}
 		}
 	}
 
-	PrintAnswer(4, largest_palidrome)
+	utils.PrintAnswer(4, largest_palidrome)
 }

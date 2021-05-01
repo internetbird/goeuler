@@ -2,6 +2,8 @@ package main
 
 import (
 	"fmt"
+
+	"github.com/internetbird/goeuler/utils"
 )
 
 //Euler 33 - Solves Project Euler problem #33
@@ -13,11 +15,11 @@ func Euler33() {
 			canceledNumerator := 0
 			canceledDenumerator := 0
 
-			numeratorDigits := GetDigits(i)
-			denumeratorDigits := GetDigits(j)
+			numeratorDigits := utils.GetDigits(i)
+			denumeratorDigits := utils.GetDigits(j)
 
-			searchIndex0 := FindIndex(denumeratorDigits, numeratorDigits[0])
-			searchIndex1 := FindIndex(denumeratorDigits, numeratorDigits[1])
+			searchIndex0 := utils.FindIndex(denumeratorDigits, numeratorDigits[0])
+			searchIndex1 := utils.FindIndex(denumeratorDigits, numeratorDigits[1])
 
 			if searchIndex0 != -1 {
 				canceledNumerator = numeratorDigits[1]

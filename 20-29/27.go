@@ -1,7 +1,11 @@
 package main
 
-import "math"
-import "fmt"
+import (
+	"fmt"
+	"math"
+
+	"github.com/internetbird/goeuler/mathutils"
+)
 
 func Euler27() {
 
@@ -12,7 +16,7 @@ func Euler27() {
 	for a := -999; a < 1000; a++ {
 		for b := -1000; b <= 1000; b++ {
 
-			if !IsPrime(b) {
+			if !mathutils.IsPrime(b) {
 				continue
 			}
 
@@ -20,7 +24,7 @@ func Euler27() {
 			//value for n=1
 			value := 1 + a + b
 
-			for IsPrime(value) {
+			for mathutils.IsPrime(value) {
 
 				if n > max_primes {
 					max_primes = n

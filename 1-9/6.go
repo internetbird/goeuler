@@ -1,6 +1,10 @@
 package main
 
-import "math"
+import (
+	"math"
+
+	"github.com/internetbird/goeuler/utils"
+)
 
 func Euler6() {
 	//Project Euler Problem #6
@@ -14,6 +18,6 @@ func Euler6() {
 	}
 	squareOfSums := int(math.Pow(float64(sum), 2))
 
-	PrintAnswer(6, squareOfSums-sumOfSquares)
+	utils.PrintAnswer(6, squareOfSums-sumOfSquares)
 
 }

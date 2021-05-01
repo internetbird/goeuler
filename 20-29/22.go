@@ -5,6 +5,8 @@ import (
 	"io/ioutil"
 	"sort"
 	"strings"
+
+	"github.com/internetbird/goeuler/utils"
 )
 
 func Euler22() {
@@ -31,7 +33,7 @@ func Euler22() {
 		fmt.Println("Error reading names file")
 	}
 
-	PrintAnswer(22, sum)
+	utils.PrintAnswer(22, sum)
 }
 
 func GetNameValue(name string, position int) int {

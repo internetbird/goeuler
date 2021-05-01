@@ -1,10 +1,12 @@
 package main
 
+import "github.com/internetbird/goeuler/utils"
+
 func Euler15() {
 
 	numOfPaths := GetLatticePathNums(20, 20)
 
-	PrintAnswer(15, numOfPaths)
+	utils.PrintAnswer(15, numOfPaths)
 }
 
 func GetLatticePathNums(height int, width int) int {

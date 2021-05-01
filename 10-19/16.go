@@ -2,16 +2,15 @@ package main
 
 import (
 	"math/big"
-	"strconv"
+
+	"github.com/internetbird/goeuler/utils"
 )
 
 func Euler16() {
 
 	powVal := new(big.Int).Exp(big.NewInt(2), big.NewInt(1000), nil)
 
-	powValStr := powVal.String()
+	sum := utils.SumDigits(powVal.String())
 
-	sum := SumDigits(powVal.String())
-
-	PrintAnswer(16, sum)
+	utils.PrintAnswer(16, sum)
 }

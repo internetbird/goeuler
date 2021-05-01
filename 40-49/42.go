@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"io/ioutil"
 	"strings"
+
+	"github.com/internetbird/goeuler/utils"
 )
 
 func Euler42() {
@@ -33,7 +35,7 @@ func Euler42() {
 		fmt.Println("Error reading names file")
 	}
 
-	PrintAnswer(42, numOfTriangleWords)
+	utils.PrintAnswer(42, numOfTriangleWords)
 }
 
 func IsTriangleNumber(num int) bool {

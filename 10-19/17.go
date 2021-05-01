@@ -1,6 +1,9 @@
 package main
 
-import "strings"
+import (
+	"github.com/internetbird/goeuler/utils"
+	"strings"
+)
 
 func Euler17() {
 
@@ -12,7 +15,7 @@ func Euler17() {
 		totalLetters += len(numText)
 	}
 
-	PrintAnswer(17, totalLetters)
+	utils.PrintAnswer(17, totalLetters)
 }
 
 func ConvertNumToText(num int) string {

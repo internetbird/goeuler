@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/internetbird/goeuler/utils"
+)
 
 func Euler12() {
 
@@ -14,7 +17,7 @@ func Euler12() {
 
 	fmt.Printf("\nNum of divisors is :%d\n", NumOfDivisors(triangle))
 
-	PrintAnswer(12, triangle)
+	utils.PrintAnswer(12, triangle)
 }
 
 func NumOfDivisors(num int) int {

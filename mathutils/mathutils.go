@@ -1,8 +1,10 @@
-package main
+package mathutils
 
 import (
 	"math"
 	"math/big"
+
+	"github.com/internetbird/goeuler/utils"
 )
 
 //IsPrime - Checks is num is a prime number
@@ -52,7 +54,7 @@ func GetAbundantNumbers(from int, to int) []int {
 func IsAbundantNumber(num int) bool {
 
 	properDivisors := ProperDivisorsOfNumber(num)
-	divisorsSum := SumIntArray(properDivisors)
+	divisorsSum := utils.SumIntArray(properDivisors)
 
 	return divisorsSum > num
 }
