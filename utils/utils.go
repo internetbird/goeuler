@@ -147,3 +147,19 @@ func ContainsBig(s []big.Int, e big.Int) bool {
 	}
 	return false
 }
+
+func IsPanDigital(num string) bool {
+	if len(num) != 9 {
+		return false
+	}
+	for i := 1; i <= 9; i++ {
+		digitStr := strconv.Itoa(i)
+
+		if !strings.Contains(num, digitStr) {
+			return false
+		}
+
+	}
+
+	return true
+}
