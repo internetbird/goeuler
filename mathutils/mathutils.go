@@ -10,7 +10,7 @@ import (
 //IsPrime - Checks is num is a prime number
 func IsPrime(num int) bool {
 
-	if num <= 0 {
+	if num <= 1 {
 		return false
 	}
 
