@@ -49,6 +49,11 @@ func IsPalidrome(num int) bool {
 
 }
 
+func IsPalidromeString(value string) bool {
+	revesredString := Reverse(value)
+	return strings.Compare(value, revesredString) == 0
+}
+
 //Reverse - revesrses string s
 func Reverse(s string) string {
 	r := []rune(s)
