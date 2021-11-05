@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/internetbird/goeuler/mathutils"	"github.com/internetbird/goeuler/utils"
+	"github.com/internetbird/goeuler/mathutils"
+	"github.com/internetbird/goeuler/utils"
 )
-
 
 func Euler7() {
 
