@@ -1,8 +1,11 @@
 package utils
 
 import (
+	"bufio"
 	"fmt"
+	"log"
 	"math/big"
+	"os"
 	"strconv"
 	"strings"
 )
@@ -167,4 +170,44 @@ func IsPanDigital(num string) bool {
 	}
 
 	return true
+}
+
+func IsFullPanDigital(num int) bool {
+
+	numStr := strconv.Itoa(num)
+
+	if len(numStr) != 10 {
+		return false
+	}
+	for i := 0; i <= 9; i++ {
+		digitStr := strconv.Itoa(i)
+
+		if !strings.Contains(numStr, digitStr) {
+			return false
+		}
+
+	}
+
+	return true
+}
+
+func readInputFileLines(fileName string) []string {
+	file, err := os.Open(fileName)
+
+	if err != nil {
+		log.Fatalf("failed to open")
+
+	}
+
+	scanner := bufio.NewScanner(file)
+
+	scanner.Split(bufio.ScanLines)
+	var text []string
+
+	for scanner.Scan() {
+		text = append(text, scanner.Text())
+	}
+
+	return text
+
 }
